@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHS General Practitioner</title>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='logo-black.png')}}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">   
+</head>
+<body>
+<div class="header">
+    <header class="bg-primary">
+      <a href="{{ url_for('index') }}"><img src="{{url_for('static', filename='logo-no-background.svg')}}"  class="rounded mx-auto d-block " alt="logo company" width="150px" /></a>
+    </header>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{ url_for('index') }}"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item text-center">
+            <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('services') }}">Services</a>
+          </li>
+          <li class="nav-item">
+           <a class="nav-link" href="{{ url_for('booking') }}">Online Booking</a> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('diagnosis') }}">Online Diagnosis</a> 
+           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a> 
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<div class="links">
+  <div>
+    <div class="p-5 text-center bg-image rounded-3" style="
+    background-image: url('/static/main.jpg');
+    height: 400px;">
+   <div class="mask position-relative top-50 start-50 translate-middle" style="background-color: rgba(0, 0, 0, 0.6);">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="text-white">
+        <h1 class="mb-4">Welcome to Your General Practitioner</h1>
+        <h4 class="mb-4">Your local GP Practice based in Oldham</h4>
+      </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<div class="container-xl p-3">
+    <div class="services">
+        <h2 class="text-center p-3 border-3 border-warning border-bottom bg-primary text-white">Patient Services</h2>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 text-center">
+            <div class="card" href="index.html">
+                <img src="{{url_for('static', filename='logo-2.jpg')}}" alt="Online Booking" class="card-img-top border-bottom border-dark">
+                <div class="card-body bg-primary border-3 border-warning border-bottom">
+                    <h4><a class="card-title bg-primary text-white" href="{{ url_for('booking') }}">Online Booking</a></h4>
+                    <p class="card-text"></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 text-center">
+            <div class="card" href="index.html">
+                <img src="{{url_for('static', filename='logo-5.png')}}" alt="Patient Services" class="card-img-top border-bottom border-dark">
+                <div class="card-body bg-primary border-3 border-warning border-bottom">
+                    <h4><a class="card-title bg-primary text-white" href="{{ url_for('services') }}">Services</a></h4>
+                    <p class="card-text"></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 text-center">
+            <div class="card" href="index.html">
+                <img src="{{url_for('static', filename='logo-3.jpg')}}" alt="Contact Us" class="card-img-top border-bottom border-dark">
+                <div class="card-body bg-primary border-3 border-warning border-bottom">
+                    <h4><a class="card-title bg-primary text-white"href="{{ url_for('contact') }}">Contact Us</a></h4>
+                    <p class="card-text"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-xl p-3">
+    <div class="services bg-light">
+        <h2 class="text-center p-3 border-3 border-warning border-bottom bg-primary text-white">About Us</h2>
+        <p class="text-center">
+          Welcome to Local General Practitioner, where our passion for healing and dedication to community well-being inspire our commitment to providing great healthcare.
+          Our hospital was founded with the goal of providing patient-centred care, and it brings together a team of caring and talented healthcare experts that prioritise your health and comfort.
+        </p>
+    </div>
+  </div>
+  <div class="container-xl p-3">
+    <div class="services bg-light">
+        <h2 class="text-center p-3 border-3 border-warning border-bottom bg-primary text-white">Contact Us</h2>
+        <p class="text-center">For appointments and inquiries, please contact us:
+        <address class="text-center">
+            Email: info@localGP.com<br>
+            Phone: (123) 456-7890
+        </address>
+    </div>
+</div>
+  <div class="bg-dark">
+      <ul class="nav justify-content-center">
+          <li class="nav-item">
+              <a href="{{ url_for('index') }}" class="nav-link px-2 text-white">Home</a>
+          </li>
+          <li class="nav-item">
+              <a href="{{ url_for('services') }}" class="nav-link px-2 text-white">Services</a>
+          </li>
+          <li class="nav-item">
+              <a href="{{ url_for('booking') }}" class="nav-link px-2 text-white">Online Appointments</a>
+          </li>
+          <li class="nav-item">
+              <a href="{{ url_for('diagnosis') }}" class="nav-link px-2 text-white">Online Diagnosis</a>
+          </li>
+          <li class="nav-item">
+              <a href="{{ url_for('contact') }}" class="nav-link px-2 text-white">Contact</a>
+          </li>
+      </ul>
+      <p class="text-center text-primary p-0 mb-0 text-white">© 2023 Local NHS General Practitioner</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+main {
+    flex: 1;
+}
+header {
+    background-color: #fff;
+    color: #fff;
+    padding: 1px;
+    text-align: center;
+    justify-content: center;
+}
+nav {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+section {
+    padding: 20px;
+}
+
+div.services{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+div.contact{
+    min-height:  100vh;
+    background-color: #0ab9ee3a;
+    padding: 50px;
+    text-align: center;
+}
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+
+    padding: 2%;
+}
+.container h1{
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: rgb(7, 131, 233);
+ }
+ .contact-wrapper{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-gap: 15px;
+ }
+ .contact-form{
+     text-align: left;
+ }
+ .form-group{
+     margin-bottom: 15px;
+ }
+ input, textarea{
+     width: 100%;
+     padding: 18px;
+     border-radius: 4px;
+     border: none;
+     background-color: #f8f9fa;
+     color: rgb(87, 84, 84);
+ }
+ input:focus,
+ textarea:focus{
+     outline: none;
+     box-shadow:  0 0 4px rgb(243, 209, 209);
+ }
+ button{
+     display: inline-block;
+     padding: 12px 24px;
+     background-color: #fa4f00; 
+    color:rgb(246, 246, 248);
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+ }
+ button:hover{
+    background-color: #4be253; 
+ }
+ .contact-info{
+     text-align: left;
+ }
+ .contact-info h2{
+     font-size: 20px;
+     margin-bottom: 15px;
+     color: rgb(102, 98, 98);
+ }
+ .contact-info p{
+     margin-bottom: 7px;
+     color: rgb(99, 84, 84);
+
+ }
+ .contact-info i{
+     color: #417ceb;
+     margin-right: 7px;
+ }
+
+ @media screen and(max-width: 768px){
+    .container{padding: 15px;}
+    .contact-wrapper{
+        grid-template-columns: 2fr;
+    }
+ }
